@@ -24,32 +24,14 @@
             color: #000000;
         }
 
-        /* Stil für den Spotify-Player */
-        #spotify-player {
-            width: 300px;
-            height: 80px;
-        }
-
-        /* Stil für die Klickbox */
-        .pink-box {
-            background-color: hsl(314, 100%, 48%);
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        /* Stil für den sichtbaren Text im Rezept */
-        .recipe-text {
-            display: none;
-        }
-
         /* Stil für die Boxen */
         .series-box {
             display: flex;
             margin: 20px;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ccc;
             background-color: #f7f7f7;
-            width: 300px;
+            width: 400px; /* Breite der Boxen erhöht */
         }
 
         /* Stil für die Serie */
@@ -75,6 +57,7 @@
         .series-image img {
             max-width: 100%;
             height: auto;
+            max-height: 300px; /* Maximalhöhe für die Bilder erhöht */
         }
     </style>
 </head>
@@ -86,7 +69,7 @@
     <p>In meiner Freizeit backe und koche ich. &#129380;</p>
     <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
 
-        <!-- Bereich für das Rezept -->
+    <!-- Bereich für das Rezept -->
     <div id="rezept">
         <h2>Rezept für Olivenbrot</h2>
         <!-- Klickbox für das Rezept -->
@@ -110,7 +93,7 @@
     <!-- Box 1: House of the Dragon -->
     <div class="series-box">
         <div class="series-image">
-            <img src="Houseofthedragon.jpg" alt="House of the Dragon">
+            <img src="Houseofthedragon.jpeg" alt="House of the Dragon">
         </div>
         <div class="series-info">
             <h2>House of the Dragon</h2>
@@ -124,9 +107,9 @@
     <!-- Box 2: One Piece -->
     <div class="series-box">
         <div class="series-image">
-            <img src="Onepiece.jpg" alt="One Piece">
+            <img src="OnePiece.jpeg" alt="One Piece">
         </div>
-        <div class="series-info">
+        <div class "series-info">
             <h2>One Piece</h2>
             <p>
                 "One Piece" ist eine beliebte Anime-Serie über die Abenteuer von Monkey D. Ruffy und seiner Crew.
@@ -138,7 +121,7 @@
     <!-- Box 3: Bridgerton -->
     <div class="series-box">
         <div class="series-image">
-            <img src="Bridgerton.jpg" alt="Bridgerton">
+            <img src="Bridgerton.jpeg" alt="Bridgerton">
         </div>
         <div class="series-info">
             <h2>Bridgerton</h2>
@@ -152,4 +135,13 @@
     <script>
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
-           
+            const recipeText = document.querySelector('.recipe-text');
+            if (recipeText.style.display === 'none' || recipeText.style.display === '') {
+                recipeText.style.display = 'block';
+            } else {
+                recipeText.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
