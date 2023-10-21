@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carla's erstes "html-Dokument"</title>
+    <title>Carla's Website</title>
     <style>
         /* Stil für die Schriftart */
         body {
@@ -12,16 +12,16 @@
 
         /* Stil für die Überschrift */
         h1 {
-            font-family: Arial, sans-serif; /* Schriftart */
-            font-size: 28px; /* Schriftgröße */
-            color: hsl(308, 100%, 50%); /* Farbe (hexadezimal) */
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            color: hsl(308, 100%, 50%);
         }
 
         /* Stil für den Text */
         p {
-            font-family: Arial, sans-serif; /* Schriftart */
-            font-size: 18px; /* Schriftgröße */
-            color: #000000; /* Farbe (hexadezimal) */
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #000000;
         }
 
         /* Stil für den Spotify-Player */
@@ -41,61 +41,115 @@
         .recipe-text {
             display: none;
         }
+
+        /* Stil für die Boxen */
+        .series-box {
+            display: flex;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            width: 300px;
+        }
+
+        /* Stil für die Serie */
+        .series-info {
+            flex: 1;
+            padding: 10px;
+        }
+
+        /* Stil für Bilder */
+        .series-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Stil für Links */
+        .series-link {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Stil für Bilder */
+        .series-image img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <!-- Teil 1: Einführung -->
-    <div id="part1">
-        <h1>Willkommen auf Carlas Website!</h1>
-        <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
-        <p>In meiner Freizeit backe und koche ich. &#129380;</p>
-        <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
-        <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
-    </div>
+    <!-- Überschrift -->
+    <h1>Willkommen auf Carlas Website!</h1>
 
-    <!-- Teil 2: Carlas Rezepte -->
-    <div id="part2">
-        <h2>Carlas Rezepte</h2>
+    <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
+    <p>In meiner Freizeit backe und koche ich. &#129380;</p>
+    <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
+
         <!-- Bereich für das Rezept -->
-        <div id="rezept">
-            <h2>Rezept für Olivenbrot</h2>
-            <!-- Klickbox für das Rezept -->
-            <div class="pink-box" onclick="toggleRecipe()">
-                Hier klicken für das Olivenbrotrezept
-            </div>
-            <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
-            <div class="recipe-text">
-                <p>Hier ist das Rezept für mein Olivenbrot...</p>
-                <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
-                <p>1 Päckchen Trockenhefe</p>
-                <p>375 ml warmes Wasser</p>
-                <p>1.5 Teelöffel Salz</p>
-                <p>1 Esslöffel Olivenöl</p>
-                <p>100-150 g entsteinte, zerkleinerte Oliven</p>
-            </div>
+    <div id="rezept">
+        <h2>Rezept für Olivenbrot</h2>
+        <!-- Klickbox für das Rezept -->
+        <div class="pink-box" onclick="toggleRecipe()">
+            Hier klicken für das Olivenbrotrezept
+        </div>
+        <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
+        <div class="recipe-text">
+            <p>Hier ist das Rezept für mein Olivenbrot...</p>
+            <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
+            <p>1 Päckchen Trockenhefe</p>
+            <p>375 ml warmes Wasser</p>
+            <p>1.5 Teelöffel Salz</p>
+            <p>1 Esslöffel Olivenöl</p>
+            <p>100-150 g entsteinte, zerkleinerte Oliven</p>
         </div>
     </div>
 
-    <!-- Teil 3: Was ich mag -->
-    <div id="part3">
-        <h2>Was ich mag</h2>
-        <!-- Spotify-Player -->
-        <!-- Spotify-Player für eine Playlist -->
-        <iframe id="spotify-player" src="https://open.spotify.com/embed/playlist/SsrQL409CDb" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
+
+    <!-- Box 1: House of the Dragon -->
+    <div class="series-box">
+        <div class="series-image">
+            <img src="Houseofthedragon.jpg" alt="House of the Dragon">
+        </div>
+        <div class="series-info">
+            <h2>House of the Dragon</h2>
+            <p>
+                "House of the Dragon" ist eine fantastische Serie, die im Game of Thrones-Universum spielt.
+            </p>
+            <a class="series-link" href="https://show.sky.ch/de/serien/105781/house-of-the-dragon?utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=GS-CH-de-DSA-0-AQ&gclid=CjwKCAjwysipBhBXEiwApJOcu7Ti5I2cOtwrz7LPBc9oeufagomuyKzjisCqzs9a31S-C0eKG2fhrhoCPooQAvD_BwE" target="_blank">Mehr erfahren</a>
+        </div>
     </div>
 
+    <!-- Box 2: One Piece -->
+    <div class="series-box">
+        <div class="series-image">
+            <img src="Onepiece.jpg" alt="One Piece">
+        </div>
+        <div class="series-info">
+            <h2>One Piece</h2>
+            <p>
+                "One Piece" ist eine beliebte Anime-Serie über die Abenteuer von Monkey D. Ruffy und seiner Crew.
+            </p>
+            <a class="series-link" href="https://www.crunchyroll.com/de/series/GR5PW1W0R/one-piece-international" target="_blank">Mehr erfahren</a>
+        </div>
+    </div>
 
+    <!-- Box 3: Bridgerton -->
+    <div class="series-box">
+        <div class="series-image">
+            <img src="Bridgerton.jpg" alt="Bridgerton">
+        </div>
+        <div class="series-info">
+            <h2>Bridgerton</h2>
+            <p>
+                "Bridgerton" ist eine historische Serie, die Intrigen und Romantik im London des 19. Jahrhunderts zeigt.
+            </p>
+            <a class="series-link" href="https://www.netflix.com/ch/title/80232398" target="_blank">Mehr erfahren</a>
+        </div>
+    </div>
 
     <script>
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
-            const recipeText = document.querySelector('.recipe-text');
-            if (recipeText.style.display === 'none' || recipeText.style.display === '') {
-                recipeText.style.display = 'block';
-            } else {
-                recipeText.style.display = 'none';
-            }
-        }
-    </script>
-</body>
-</html>
+           
