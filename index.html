@@ -24,31 +24,30 @@
             color: #000000;
         }
 
-        /* Stil für die Boxen */
-        .series-box {
+        /* Container für die Serienboxen */
+        .series-container {
             display: flex;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f7f7f7;
-            width: 400px; /* Breite der Boxen erhöht */
+            justify-content: space-between;
         }
 
-        /* Stil für die Serie */
-        .series-info {
+        /* Stil für die Serie-Boxen */
+        .series-box {
             flex: 1;
+            margin: 10px;
             padding: 10px;
+            border: 1px solid hsl(312, 78%, 82%);
+            background-color: #f7f7f7;
+            max-width: 300px; /* Maximalbreite für die Boxen */
         }
 
         /* Stil für Bilder */
         .series-image {
-            flex: 1;
             text-align: center;
         }
 
         /* Stil für Links */
         .series-link {
-            color: #0073e6;
+            color: #8300c0;
             text-decoration: none;
             font-weight: bold;
         }
@@ -57,7 +56,7 @@
         .series-image img {
             max-width: 100%;
             height: auto;
-            max-height: 300px; /* Maximalhöhe für die Bilder erhöht */
+            max-height: 200px; /* Maximalhöhe für die Bilder */
         }
     </style>
 </head>
@@ -90,45 +89,48 @@
 
     <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
 
-    <!-- Box 1: House of the Dragon -->
-    <div class="series-box">
-        <div class="series-image">
-            <img src="Houseofthedragon.jpeg" alt="House of the Dragon">
+    <!-- Container für die Serienboxen -->
+    <div class="series-container">
+        <!-- Box 1: House of the Dragon -->
+        <div class="series-box">
+            <div class="series-image">
+                <img src="Houseofthedragon.jpeg" alt="House of the Dragon">
+            </div>
+            <div class="series-info">
+                <h2>House of the Dragon</h2>
+                <p>
+                    "House of the Dragon" ist eine fantastische Serie, die im Game of Thrones-Universum spielt.
+                </p>
+                <a class="series-link" href="https://show.sky.ch/de/serien/105781/house-of-the-dragon?utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=GS-CH-de-DSA-0-AQ&gclid=CjwKCAjwysipBhBXEiwApJOcu7Ti5I2cOtwrz7LPBc9oeufagomuyKzjisCqzs9a31S-C0eKG2fhrhoCPooQAvD_BwE" target="_blank">Mehr erfahren</a>
+            </div>
         </div>
-        <div class="series-info">
-            <h2>House of the Dragon</h2>
-            <p>
-                "House of the Dragon" ist eine fantastische Serie, die im Game of Thrones-Universum spielt.
-            </p>
-            <a class="series-link" href="https://show.sky.ch/de/serien/105781/house-of-the-dragon?utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=GS-CH-de-DSA-0-AQ&gclid=CjwKCAjwysipBhBXEiwApJOcu7Ti5I2cOtwrz7LPBc9oeufagomuyKzjisCqzs9a31S-C0eKG2fhrhoCPooQAvD_BwE" target="_blank">Mehr erfahren</a>
-        </div>
-    </div>
 
-    <!-- Box 2: One Piece -->
-    <div class="series-box">
-        <div class="series-image">
-            <img src="OnePiece.jpeg" alt="One Piece">
+        <!-- Box 2: One Piece -->
+        <div class="series-box">
+            <div class="series-image">
+                <img src="OnePiece.jpeg" alt="One Piece">
+            </div>
+            <div class="series-info">
+                <h2>One Piece</h2>
+                <p>
+                    "One Piece" ist eine beliebte Anime-Serie über die Abenteuer von Monkey D. Ruffy und seiner Crew.
+                </p>
+                <a class="series-link" href="https://www.crunchyroll.com/de/series/GR5PW1W0R/one-piece-international" target="_blank">Mehr erfahren</a>
+            </div>
         </div>
-        <div class "series-info">
-            <h2>One Piece</h2>
-            <p>
-                "One Piece" ist eine beliebte Anime-Serie über die Abenteuer von Monkey D. Ruffy und seiner Crew.
-            </p>
-            <a class="series-link" href="https://www.crunchyroll.com/de/series/GR5PW1W0R/one-piece-international" target="_blank">Mehr erfahren</a>
-        </div>
-    </div>
 
-    <!-- Box 3: Bridgerton -->
-    <div class="series-box">
-        <div class="series-image">
-            <img src="Bridgerton.jpeg" alt="Bridgerton">
-        </div>
-        <div class="series-info">
-            <h2>Bridgerton</h2>
-            <p>
-                "Bridgerton" ist eine historische Serie, die Intrigen und Romantik im London des 19. Jahrhunderts zeigt.
-            </p>
-            <a class="series-link" href="https://www.netflix.com/ch/title/80232398" target="_blank">Mehr erfahren</a>
+        <!-- Box 3: Bridgerton -->
+        <div class="series-box">
+            <div class="series-image">
+                <img src="Bridgerton.jpeg" alt="Bridgerton">
+            </div>
+            <div class="series-info">
+                <h2>Bridgerton</h2>
+                <p>
+                    "Bridgerton" ist eine historische Serie, die Intrigen und Romantik im London des 19. Jahrhunderts zeigt.
+                </p>
+                <a class="series-link" href="https://www.netflix.com/ch/title/80232398" target="_blank">Mehr erfahren</a>
+            </div>
         </div>
     </div>
 
