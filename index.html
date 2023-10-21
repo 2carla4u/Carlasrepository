@@ -29,6 +29,18 @@
             width: 300px;
             height: 80px;
         }
+
+        /* Stil für die Klickbox */
+        .pink-box {
+            background-color: pink;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Stil für den sichtbaren Text im Rezept */
+        .recipe-text {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -39,21 +51,40 @@
     
     <!-- Spotify-Player -->
     <!-- Spotify-Player für eine Playlist -->
-<iframe id="spotify-player" src="https://open.spotify.com/embed/playlist/SsrQL409CDb" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe id="spotify-player" src="https://open.spotify.com/embed/playlist/SsrQL409CDb" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
     
     <!-- Bereich für das Rezept -->
     <div id="rezept">
         <h2>Rezept für Olivenbrot</h2>
-        <p>Hier ist das Rezept für mein Olivenbrot...</p>
-        <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
-        <p>1 Päckchen Trockenhefe</p>
-        <p>375 ml warmes Wasser</p>
-        <p>1.5 Teelöffel Salz</p>
-        <p>1 Esslöffel Olivenöl</p>
-        <p>100-150 g entsteinte, zerkleinerte Oliven</p>
+        <!-- Klickbox für das Rezept -->
+        <div class="pink-box" onclick="toggleRecipe()">
+            Hier klicken für das Olivenbrotrezept
+        </div>
+        <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
+        <div class="recipe-text">
+            <p>Hier ist das Rezept für mein Olivenbrot...</p>
+            <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
+            <p>1 Päckchen Trockenhefe</p>
+            <p>375 ml warmes Wasser</p>
+            <p>1.5 Teelöffel Salz</p>
+            <p>1 Esslöffel Olivenöl</p>
+            <p>100-150 g entsteinte, zerkleinerte Oliven</p>
+        </div>
     </div>
 
     <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
+
+    <script>
+        // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
+        function toggleRecipe() {
+            const recipeText = document.querySelector('.recipe-text');
+            if (recipeText.style.display === 'none' || recipeText.style.display === '') {
+                recipeText.style.display = 'block';
+            } else {
+                recipeText.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
