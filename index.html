@@ -44,36 +44,47 @@
     </style>
 </head>
 <body>
-    <h1>Willkommen auf Carlas Website!</h1>
-    <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
-    <p>In meiner Freizeit backe und koche ich. &#129380;</p>
-    <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
-    
-    <!-- Spotify-Player -->
-    <!-- Spotify-Player für eine Playlist -->
-    <iframe id="spotify-player" src="https://open.spotify.com/embed/playlist/SsrQL409CDb" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <!-- Teil 1: Einführung -->
+    <div id="part1">
+        <h1>Willkommen auf Carlas Website!</h1>
+        <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
+        <p>In meiner Freizeit backe und koche ich. &#129380;</p>
+        <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
+        <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
+    </div>
 
-    
-    <!-- Bereich für das Rezept -->
-    <div id="rezept">
-        <h2>Rezept für Olivenbrot</h2>
-        <!-- Klickbox für das Rezept -->
-        <div class="pink-box" onclick="toggleRecipe()">
-            Hier klicken für das Olivenbrotrezept
-        </div>
-        <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
-        <div class="recipe-text">
-            <p>Hier ist das Rezept für mein Olivenbrot...</p>
-            <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
-            <p>1 Päckchen Trockenhefe</p>
-            <p>375 ml warmes Wasser</p>
-            <p>1.5 Teelöffel Salz</p>
-            <p>1 Esslöffel Olivenöl</p>
-            <p>100-150 g entsteinte, zerkleinerte Oliven</p>
+    <!-- Teil 2: Carlas Rezepte -->
+    <div id="part2">
+        <h2>Carlas Rezepte</h2>
+        <!-- Bereich für das Rezept -->
+        <div id="rezept">
+            <h2>Rezept für Olivenbrot</h2>
+            <!-- Klickbox für das Rezept -->
+            <div class="pink-box" onclick="toggleRecipe()">
+                Hier klicken für das Olivenbrotrezept
+            </div>
+            <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
+            <div class="recipe-text">
+                <p>Hier ist das Rezept für mein Olivenbrot...</p>
+                <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
+                <p>1 Päckchen Trockenhefe</p>
+                <p>375 ml warmes Wasser</p>
+                <p>1.5 Teelöffel Salz</p>
+                <p>1 Esslöffel Olivenöl</p>
+                <p>100-150 g entsteinte, zerkleinerte Oliven</p>
+            </div>
         </div>
     </div>
 
-    <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
+    <!-- Teil 3: Was ich mag -->
+    <div id="part3">
+        <h2>Was ich mag</h2>
+        <!-- Spotify-Player -->
+        <!-- Spotify-Player für eine Playlist -->
+        <iframe id="spotify-player" src="https://open.spotify.com/embed/playlist/SsrQL409CDb" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+
 
     <script>
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
