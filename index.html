@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Carla's Website</title>
     <style>
         /* Stil für die Schriftart */
@@ -10,21 +11,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Stil für die Überschrift */
-        h1 {
-            font-family: Arial, sans-serif;
-            font-size: 28px;
-            color: hsl(308, 100%, 50%);
-        }
-
-        /* Stil für den Text */
-        p {
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            color: #000000;
-        }
-
-        /* Container für die Serienboxen */
+        /* Stil für die Boxen */
         .series-container {
             display: flex;
             justify-content: space-between;
@@ -76,7 +63,7 @@
             Hier klicken für das Olivenbrotrezept
         </div>
         <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
-        <div class="recipe-text">
+        <div class="recipe-text" style="display: none;">
             <p>Hier ist das Rezept für mein Olivenbrot...</p>
             <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
             <p>1 Päckchen Trockenhefe</p>
@@ -106,7 +93,7 @@
         </div>
 
         <!-- Box 2: One Piece -->
-        <div class="series-box">
+        <div class "series-box">
             <div class="series-image">
                 <img src="OnePiece.jpeg" alt="One Piece">
             </div>
@@ -134,6 +121,26 @@
         </div>
     </div>
 
+    <!-- Sudoku-Spiel -->
+    <div>
+        <h2>Sudoku - Mittelschwer</h2>
+        <table>
+            <!-- Hier fügen Sie das Sudoku-Gitter ein -->
+            <tr>
+                <td id="cell-00"></td>
+                <td id="cell-01"></td>
+                <td id="cell-02"></td>
+                <td id="cell-03"></td>
+                <td id="cell-04"></td>
+                <td id="cell-05"></td>
+                <td id="cell-06"></td>
+                <td id="cell-07"></td>
+                <td id="cell-08"></td>
+            </tr>
+            <!-- Fügen Sie hier die restlichen Zeilen hinzu -->
+        </table>
+    </div>
+
     <script>
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
@@ -141,7 +148,7 @@
             if (recipeText.style.display === 'none' || recipeText.style.display === '') {
                 recipeText.style.display = 'block';
             } else {
-                recipeText.style.display = 'none';
+                recipeText.style display = 'none';
             }
         }
     </script>
