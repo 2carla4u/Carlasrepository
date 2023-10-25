@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Dies ist dein vorhandenes CSS -->
+    <link rel="stylesheet" href="sudokuJS.css"> <!-- Hier fügst du das heruntergeladene CSS hinzu -->
+    <title>Carla's Website</title>
+    <!-- Weitere Styles oder Metadaten hier -->
+</head>
+<body>
+    <!-- Rest deines HTML-Codes -->
+</body>
+</html>
+
     <title>Carla's Website</title>
     <style>
         /* Stil für die Schriftart */
@@ -93,7 +102,7 @@
         </div>
 
         <!-- Box 2: One Piece -->
-        <div class "series-box">
+        <div class="series-box">
             <div class="series-image">
                 <img src="OnePiece.jpeg" alt="One Piece">
             </div>
@@ -111,7 +120,7 @@
             <div class="series-image">
                 <img src="Bridgerton.jpeg" alt="Bridgerton">
             </div>
-            <div class="series-info">
+            <div class "series-info"> <!-- Korrigierter Tippfehler (Leerzeichen) -->
                 <h2>Bridgerton</h2>
                 <p>
                     "Bridgerton" ist eine historische Serie, die Intrigen und Romantik im London des 19. Jahrhunderts zeigt.
@@ -142,15 +151,47 @@
     </div>
 
     <script>
+        // Hier können Sie das Sudoku-Rätsel erstellen, indem Sie die Zellen füllen.
+        // Verwenden Sie 0 für leere Zellen.
+        const sudokuBoard = [
+          [5, 3, 0, 0, 7, 0, 0, 0, 0],
+          [6, 0, 0, 1, 9, 5, 0, 0, 0],
+          [0, 9, 8, 0, 0, 0, 0, 6, 0],
+          [8, 0, 0, 0, 6, 0, 0, 0, 3],
+          [4, 0, 0, 8, 0, 3, 0, 0, 1],
+          [7, 0, 0, 0, 2, 0, 0, 0, 6],
+          [0, 6, 0, 0, 0, 0, 2, 8, 0],
+          [0, 0, 0, 4, 1, 9, 0, 0, 5],
+          [0, 0, 0, 0, 8, 0, 0, 7, 9]
+        ];
+
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
             const recipeText = document.querySelector('.recipe-text');
             if (recipeText.style.display === 'none' || recipeText.style.display === '') {
                 recipeText.style.display = 'block';
             } else {
-                recipeText.style display = 'none';
+                recipeText.style.display = 'none';
             }
         }
+
+        // Funktion zum Anzeigen des Sudoku-Rätsels
+        function displaySudoku() {
+            const table = document.querySelector('table');
+            for (let i = 0; i < 9; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < 9; j++) {
+                    const cell = document.createElement('td');
+                    cell.id = `cell-${i}${j}`;
+                    cell.textContent = sudokuBoard[i][j] !== 0 ? sudokuBoard[i][j] : '';
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+        }
+
+        // Rufen Sie die Funktion zur Anzeige des Sudoku-Rätsels auf.
+        displaySudoku();
     </script>
 </body>
 </html>
