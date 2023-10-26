@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="all" type="text/css" href="../sudokuJS.css">
-    <style>
     <title>Carla's Website</title>
     <style>
         /* Stil für die Schriftart */
@@ -48,13 +47,21 @@
             max-height: 200px; /* Maximalhöhe für die Bilder */
         }
     </style>
+<!-- Überschrift -->
+ <h1>Willkommen auf Carlas Website!</h1>
+
+<p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
+<p>In meiner Freizeit backe und koche ich. &#129380;</p>
 </head>
 <body>
-    <!-- Überschrift -->
-    <h1>Willkommen auf Carlas Website!</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#recipes">Meine Rezepte</a></li>
+            <li><a href="#likes">Was ich mag</a></li>
+        </ul>
+    </nav>
 
-    <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
-    <p>In meiner Freizeit backe und koche ich. &#129380;</p>
     <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
 
     <!-- Bereich für das Rezept -->
@@ -113,7 +120,7 @@
             <div class="series-image">
                 <img src="Bridgerton.jpeg" alt="Bridgerton">
             </div>
-            <div class "series-info"> <!-- Korrigierter Tippfehler (Leerzeichen) -->
+            <div class="series-info">
                 <h2>Bridgerton</h2>
                 <p>
                     "Bridgerton" ist eine historische Serie, die Intrigen und Romantik im London des 19. Jahrhunderts zeigt.
@@ -123,41 +130,7 @@
         </div>
     </div>
 
-    <!-- Sudoku-Spiel -->
-    <div>
-        <h2>Sudoku - Mittelschwer</h2>
-        <table>
-            <!-- Hier fügen Sie das Sudoku-Gitter ein -->
-            <tr>
-                <td id="cell-00"></td>
-                <td id="cell-01"></td>
-                <td id="cell-02"></td>
-                <td id="cell-03"></td>
-                <td id="cell-04"></td>
-                <td id="cell-05"></td>
-                <td id="cell-06"></td>
-                <td id="cell-07"></td>
-                <td id="cell-08"></td>
-            </tr>
-            <!-- Fügen Sie hier die restlichen Zeilen hinzu -->
-        </table>
-    </div>
-
     <script>
-        // Hier können Sie das Sudoku-Rätsel erstellen, indem Sie die Zellen füllen.
-        // Verwenden Sie 0 für leere Zellen.
-        const sudokuBoard = [
-          [5, 3, 0, 0, 7, 0, 0, 0, 0],
-          [6, 0, 0, 1, 9, 5, 0, 0, 0],
-          [0, 9, 8, 0, 0, 0, 0, 6, 0],
-          [8, 0, 0, 0, 6, 0, 0, 0, 3],
-          [4, 0, 0, 8, 0, 3, 0, 0, 1],
-          [7, 0, 0, 0, 2, 0, 0, 0, 6],
-          [0, 6, 0, 0, 0, 0, 2, 8, 0],
-          [0, 0, 0, 4, 1, 9, 0, 0, 5],
-          [0, 0, 0, 0, 8, 0, 0, 7, 9]
-        ];
-
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
             const recipeText = document.querySelector('.recipe-text');
@@ -167,24 +140,6 @@
                 recipeText.style.display = 'none';
             }
         }
-
-        // Funktion zum Anzeigen des Sudoku-Rätsels
-        function displaySudoku() {
-            const table = document.querySelector('table');
-            for (let i = 0; i < 9; i++) {
-                const row = document.createElement('tr');
-                for (let j = 0; j < 9; j++) {
-                    const cell = document.createElement('td');
-                    cell.id = `cell-${i}${j}`;
-                    cell.textContent = sudokuBoard[i][j] !== 0 ? sudokuBoard[i][j] : '';
-                    row.appendChild(cell);
-                }
-                table.appendChild(row);
-            }
-        }
-
-        // Rufen Sie die Funktion zur Anzeige des Sudoku-Rätsels auf.
-        displaySudoku();
     </script>
 </body>
 </html>
