@@ -47,31 +47,28 @@
             max-height: 200px; /* Maximalhöhe für die Bilder */
         }
     </style>
-<!-- Überschrift -->
- <h1>Willkommen auf Carlas Website!</h1>
-
-<p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
-<p>In meiner Freizeit backe und koche ich. &#129380;</p>
 </head>
 <body>
+    <h1>Willkommen auf Carlas Website!</h1>
     <nav>
         <ul>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#recipes">Meine Rezepte</a></li>
+            <li><a href="#about-section">Über mich</a></li>
+            <li><a href="#rezept">Meine Rezepte</a></li>
             <li><a href="#likes">Was ich mag</a></li>
         </ul>
     </nav>
-
+    <div id="about-section">
+        <h2>Über mich</h2>
+        <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
+        <p>In meiner Freizeit backe und koche ich. &#129380;</p>
+        <p>Ich habe drei Schwestern. &#128105;&#8205;&#128105;&#8205;&#128105;</p>
+    </div>
     <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
-
-    <!-- Bereich für das Rezept -->
     <div id="rezept">
         <h2>Rezept für Olivenbrot</h2>
-        <!-- Klickbox für das Rezept -->
         <div class="pink-box" onclick="toggleRecipe()">
             Hier klicken für das Olivenbrotrezept
         </div>
-        <!-- Sichtbarer Text im Rezept, standardmäßig ausgeblendet -->
         <div class="recipe-text" style="display: none;">
             <p>Hier ist das Rezept für mein Olivenbrot...</p>
             <p>500 g Weissmehl (oder Mehl deiner Wahl)</p>
@@ -82,10 +79,6 @@
             <p>100-150 g entsteinte, zerkleinerte Oliven</p>
         </div>
     </div>
-
-    <p>Ich habe drei Schwestern &#128105;&#8205;&#128105;&#8205;&#128105;</p>
-
-    <!-- Container für die Serienboxen -->
     <div class="series-container">
         <!-- Box 1: House of the Dragon -->
         <div class="series-box">
@@ -106,7 +99,7 @@
             <div class="series-image">
                 <img src="OnePiece.jpeg" alt="One Piece">
             </div>
-            <div class="series-info">
+            <div class "series-info">
                 <h2>One Piece</h2>
                 <p>
                     "One Piece" ist eine beliebte Anime-Serie über die Abenteuer von Monkey D. Ruffy und seiner Crew.
@@ -129,7 +122,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // JavaScript-Funktion, um das Rezept anzuzeigen/auszublenden
         function toggleRecipe() {
