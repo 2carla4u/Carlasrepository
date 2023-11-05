@@ -77,6 +77,17 @@
             height: auto;
             max-height: 200px; /* Maximalhöhe für die Bilder */
         }
+        #myAudio {
+            background-color: #ff0088; /* Hintergrundfarbe ändern */
+            color: #ff00aa; /* Textfarbe ändern */
+        }
+
+        #playButton {
+            background-color: #ff008c; /* Hintergrundfarbe des Buttons ändern */
+            color: #fff; /* Textfarbe des Buttons ändern */
+            border: none; /* Rand des Buttons entfernen */
+            padding: 10px 20px; /* Innenabstand anpassen */
+            cursor: pointer; /* Zeiger als Zeiger anzeigen */
     </style>
 </head>
 <body>
@@ -92,7 +103,7 @@
         <button id="toggleButton">Einblenden</button>
     </div>
     <div id="hiddenText">I love Lana del Rey!!</div>
-    <button id="playButton">Play</button>
+    <button id="playButton">Abspielen</button>
 
     <audio id="myAudio" controls>
         <source src="Lana Del Rey - Ultraviolence (Audio).mp3" type="audio/mpeg">
@@ -200,7 +211,7 @@
                 playButton.textContent = "Pause";
             } else {
                 audio.pause();
-                playButton.textContent = "Play";
+                playButton.textContent = "Abspielen";
             }
         });
     </script>
