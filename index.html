@@ -7,6 +7,37 @@
     <link rel="stylesheet" media="all" type="text/css" href="../sudokuJS.css">
     <title>Carla's Website</title>
     <style>
+        #hiddenText {
+            display: none;
+            font-family: 'Lucida', cursive;
+            font-size: 10rem;
+            text-align: center;
+        }
+
+        #toggleButtonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+
+        #toggleButton {
+            background-color: #f000ff;
+            animation: pulse 1s infinite alternate;
+            border-radius: 1px;
+            font-family: 'Lucida', cursive;
+            font-size: 5rem;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+                background-color: #7d12ff;
+            }
+        }
         /* Stil für die Schriftart */
         body {
             font-family: Arial, sans-serif;
@@ -57,6 +88,10 @@
             <li><a href="#likes">Was ich mag</a></li>
         </ul>
     </nav>
+    <div id="toggleButtonContainer">
+        <button id="toggleButton">Einblenden</button>
+    </div>
+    <div id="hiddenText">I love Lana del Rey!!</div>
     <div id="about-section">
         <h2>Über mich</h2>
         <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
@@ -132,6 +167,22 @@
                 recipeText.style.display = 'none';
             }
         }
+        const toggleButton = document.getElementById("toggleButton");
+        const hiddenText = document.getElementById("hiddenText");
+        let isHidden = true;
+
+        toggleButton.addEventListener("click", function () {
+            if (isHidden) {
+                hiddenText.style.display = "block";
+                toggleButton.textContent = "Ausblenden";
+                toggleButton.style.animation = "none";
+            } else {
+                hiddenText.style.display = "none";
+                toggleButton.textContent = "Einblenden";
+                toggleButton.style.animation = "pulse 1s infinite alternate";
+            }
+            isHidden = !isHidden;
+        });
     </script>
 </body>
 </html>
