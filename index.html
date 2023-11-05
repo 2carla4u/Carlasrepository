@@ -19,6 +19,7 @@
             justify-content: center;
             align-items: center;
             height: 10vh;
+            margin-bottom: 20px; /* Abstand zum darunterliegenden Inhalt erhöhen */
         }
 
         #toggleButton {
@@ -81,6 +82,10 @@
             background-color: #ff0088; /* Hintergrundfarbe ändern */
             color: #ff00aa; /* Textfarbe ändern */
         }
+        #audioContainer {
+            text-align: center;
+            margin-top: 30; /* Abstand zum Button */
+        }
 
         #playButton {
             background-color: #ff008c; /* Hintergrundfarbe des Buttons ändern */
@@ -100,18 +105,18 @@
         </ul>
     </nav>
     <div id="toggleButtonContainer">
-        <button id="toggleButton">Einblenden</button>
-    </div>
-    <div id="hiddenText">I love Lana del Rey!!</div>
+    <button id="toggleButton">Einblenden</button>
+</div>
+<div id="hiddenText">I love Lana del Rey!!</div>
 
-    
+
+    <div id="audioContainer">
     <button id="playButton">Abspielen</button>
-
-
     <audio id="myAudio" controls>
         <source src="Lana Del Rey - Ultraviolence (Audio).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+</div>
 
     <div id="about-section">
         <h2>Über mich</h2>
