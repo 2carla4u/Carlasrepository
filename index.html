@@ -35,7 +35,7 @@
             }
             100% {
                 transform: scale(1.2);
-                background-color: #7d12ff;
+                background-color: #dd00ff;
             }
         }
         /* Stil für die Schriftart */
@@ -92,6 +92,13 @@
         <button id="toggleButton">Einblenden</button>
     </div>
     <div id="hiddenText">I love Lana del Rey!!</div>
+    <button id="playButton">Play</button>
+
+    <audio id="myAudio" controls>
+        <source src="Lana Del Rey - Ultraviolence (Audio).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div id="about-section">
         <h2>Über mich</h2>
         <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
@@ -182,6 +189,19 @@
                 toggleButton.style.animation = "pulse 1s infinite alternate";
             }
             isHidden = !isHidden;
+        });
+        // JavaScript-Code, um das Lied abzuspielen
+        const playButton = document.getElementById("playButton");
+        const audio = document.getElementById("myAudio");
+
+        playButton.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "Pause";
+            } else {
+                audio.pause();
+                playButton.textContent = "Play";
+            }
         });
     </script>
 </body>
