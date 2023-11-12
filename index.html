@@ -211,19 +211,43 @@
             }
             isHidden = !isHidden;
         });
-        // JavaScript-Code, um das Lied abzuspielen
-        const playButton = document.getElementById("playButton");
-        const audio = document.getElementById("myAudio");
+        <script>
+    // JavaScript-Code, um das Lied abzuspielen
+    const playButton = document.getElementById("playButton");
+    const audio = document.getElementById("myAudio");
 
-        playButton.addEventListener("click", function () {
-            if (audio.paused) {
-                audio.play();
-                playButton.textContent = "Pause";
-            } else {
-                audio.pause();
-                playButton.textContent = "Abspielen";
-            }
-        });
-    </script>
+    playButton.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.textContent = "Pause";
+        } else {
+            audio.pause();
+            playButton.textContent = "Abspielen";
+        }
+    });
+</script>
+<script>
+    const apiEndpoint = 'https://api.example.com/your-api-endpoint';
+    const accessToken = '...'; // Hier Ihren tatsächlichen Token einfügen
+
+    fetch(apiEndpoint, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json'
+            // Fügen Sie hier weitere Header hinzu, falls erforderlich
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('API Response:', data);
+        // Verarbeiten Sie die API-Antwort hier
+    })
+    .catch(error => {
+        console.error('Fehler beim Abrufen der API-Daten:', error);
+    });
+</script>
+
+
 </body>
 </html>
