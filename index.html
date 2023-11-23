@@ -155,5 +155,69 @@
             });
         });
     </script>
+     <title>Countdown mit Link</title>
+     <style>
+       /* Fügen Sie hier Ihren eigenen CSS-Stil hinzu, um den Countdown zu formatieren */
+       #countdown {
+         font-size: 24px;
+         text-align: center;
+         margin-top: 50px;
+       }
+     </style>
+   </head>
+   <body>
+    <title>Countdown mit Link und Button</title>
+    <style>
+      body {
+        text-align: center;  /* Hinzugefügt */
+      }
+  
+      #countdown {
+        font-size: 24px;
+        margin-top: 50px;
+      }
+  
+      #myButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <div id="countdown"></div>
+  <button id="myButton"><a href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">ASPHALT MASSAKA 4</a></button>
+  
+  <script>
+    // Setzen Sie das Enddatum für den Countdown
+    var countDownDate = new Date("Jan 12, 2024 20:00:00").getTime();
+  
+    // Aktualisieren Sie den Countdown alle 1 Sekunde
+    var x = setInterval(function() {
+  
+      // Holen Sie das aktuelle Datum und die Uhrzeit
+      var now = new Date().getTime();
+  
+      // Berechnen Sie den Abstand zwischen dem aktuellen Datum und dem Enddatum
+      var distance = countDownDate - now;
+  
+      // Berechnen Sie Tage, Stunden, Minuten und Sekunden
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      // Anzeigen des Countdowns in einem Element mit der ID "countdown"
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  
+      // Wenn der Countdown abgelaufen ist, zeigen Sie eine Nachricht an
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  
 </body>
 </html>
