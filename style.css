@@ -78,8 +78,9 @@ body {
 }
 
 .series-container {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around; /* Ändern Sie space-between zu space-around für bessere Anordnung */
 }
 
 .series-box {
@@ -88,7 +89,7 @@ body {
     padding: 10px;
     border: 1px solid hsl(312, 78%, 82%);
     background-color: #f7f7f7;
-    max-width: 100%;
+    max-width: 300px;
 }
 
 .series-image {
@@ -127,5 +128,15 @@ body {
 /* Optional: Füge Stile für Zellen mit vorgegebenen Zahlen hinzu */
 .sudoku-cell.given {
     background-color: #ddd;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
 }
 

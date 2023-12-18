@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="all" type="text/css" href="../sudokuJS.css">
     <title>Carla's Website</title>
-   
-</head>
-<body>
     <h1>Willkommen auf Carlas Website!</h1>
     <nav>
         <ul>
@@ -150,13 +147,17 @@
          margin-top: 50px;
        }
      </style>
-   </head>
-   <body>
     <title>Countdown mit Link und Button</title>
     <style>
-      body {
-        text-align: center;  /* Hinzugefügt */
-      }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.wrap {
+    padding: 2em;
+    max-width: 100%;
+    margin: 0 auto;
+}
   
       #countdown {
         font-size: 24px;
@@ -372,21 +373,19 @@
         padding: 2em 1em;
     }
 
-    @media(min-width: 30em) {
-        .sudoku-board input {
-            font-size: 1.5rem;
-        }
-
-        .sudoku-board .candidates {
-            font-size: .8em;
-        }
+    @media screen and (min-width: 30em) {
+    .sudoku-board input {
+        font-size: 1.5rem;
     }
+
+    .sudoku-board .candidates {
+        font-size: .8em;
+    }
+}
 </style>
 
 <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script src="https://mczak.com/code/sudoku/js/sudoku2.js"></script>
-</head>
-<body>
 <div class="wrap">
 <!--show candidates toggle-->
 <label for="toggleCandidates">Show candidates </label>
