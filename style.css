@@ -58,7 +58,7 @@ p {
 }
 
 #toggleButton {
-    background-color: #f000ff;
+    background-color: #ff00bb;
     animation: pulse 1s infinite alternate;
     border-radius: 1px;
     font-family: 'Lucida', cursive;
@@ -71,7 +71,7 @@ p {
     }
     100% {
         transform: scale(1.2);
-        background-color: #dd00ff;
+        background-color: #f696dc;
     }
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 #myAudio {
-    background-color: #ff0088;
+    background-color: #ff00bb;
     color: #ff00aa;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 #playButton {
-    background-color: #ff008c;
+    background-color: #ff00bb;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -142,4 +142,22 @@ nav li {
     display: inline-block;
     margin: 10px;
 }
+
+/* Fügen Sie diese Stilregeln in Ihre CSS-Datei ein */
+
+.pink-box {
+    background-color: #ff00bb; /* Hintergrundfarbe ändern (rosa) */
+    color: white; /* Textfarbe ändern */
+    padding: 10px; /* Innenabstand ändern */
+    cursor: pointer; /* Zeiger ändern, um anzuzeigen, dass es anklickbar ist */
+    border: 1px solid #ff00bb; /* Rand hinzufügen */
+    border-radius: 5px; /* Ecken abrunden */
+    text-align: center; /* Text in der Mitte ausrichten */
+}
+
+.pink-box:hover {
+    background-color: #ff00bb; /* Ändern Sie die Hintergrundfarbe im Hover-Zustand */
+    border: 1px solid #ff00bb; /* Ändern Sie den Rand im Hover-Zustand */
+}
+
 
