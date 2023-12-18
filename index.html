@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li><a href="#about-section">Über mich</a></li>
-            <li><a href="#rezept">Meine Rezepte</a></li>
+            <li><a href="#rezept">Mein Rezept</a></li>
             <li><a href="#likes">Was ich mag</a></li>
         </ul>
     </nav>
@@ -36,7 +36,6 @@
         <h2> Mein Rezept</h2>
     <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
     <div id="rezept">
-        <h2>Rezept für Olivenbrot</h2>
         <div class="pink-box" onclick="toggleRecipe()">
             Hier klicken für das Olivenbrotrezept
         </div>
@@ -170,28 +169,11 @@ body {
         font-size: 24px;
         margin-top: 50px;
       }
-      #myButton {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: rgb(255, 0, 183);
-    border: none;
-    color: white;
-    display: inline-block;
-    text-decoration: none;
-    width: 100%; /* Änderung: Breite auf 100% setzen */
-    box-sizing: border-box; /* Hinzugefügt: Berücksichtigt Polster und Grenzen in der Breite */
-}
-
-#myButton:hover {
-    background-color: #EDEDED;
-    color: black;
-    cursor: pointer;
-}
     </style>  
   <div id="countdown"></div>
-  <button id="myButton"><a href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">ASPHALT MASSAKA 4</a></button>
-  
+<a id="myButton" href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">
+  <span>ASPHALT MASSAKA 4</span>
+</a>
   <script>
     // Setzen Sie das Enddatum für den Countdown
     var countDownDate = new Date("Jan 12, 2024 20:00:00").getTime();
@@ -464,7 +446,7 @@ var $candidateToggle = $(".js-candidate-toggle"),
      $candidateToggle.trigger("change");
     </script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <button id="getQuoteButton">Kanye Zitat Generator</button>
+    <button id="getQuoteButton">Kanye Zitat Generator: Kanye as a Service</button>
     <div id="quoteContainer"></div>
     <script>
         $(document).ready(function () {
@@ -491,6 +473,40 @@ var $candidateToggle = $(".js-candidate-toggle"),
             }
         });
         </script>
-        
+        <title>Formel 1 Fahrerwertung</title>
+    </head>
+    <body>
+      <h1>Formel 1 Fahrerwertung</h1>
+      
+      <div id="driverStandings"></div>
+    
+      <script>
+        // HTTP-Anfrage an die API senden
+        fetch('http://ergast.com/api/f1/current/driverStandings.json')
+          .then(response => response.json())
+          .then(data => {
+            // Daten verarbeiten und anzeigen
+            displayDriverStandings(data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
+          })
+          .catch(error => console.error('Fehler beim Abrufen der Daten:', error));
+    
+        // Funktion zum Anzeigen der Fahrerwertung
+        function displayDriverStandings(driverStandings) {
+          const standingsContainer = document.getElementById('driverStandings');
+    
+          // Erstelle eine Liste der Fahrerwertung
+          const standingsList = document.createElement('ul');
+    
+          // Durchlaufe die Fahrerwertung und erstelle für jeden Fahrer einen Listeneintrag
+          driverStandings.forEach(driver => {
+            const driverItem = document.createElement('li');
+            driverItem.textContent = `${driver.position}. ${driver.Driver.givenName} ${driver.Driver.familyName} (${driver.Constructors[0].name}) - Punkte: ${driver.points}`;
+            standingsList.appendChild(driverItem);
+          });
+    
+          // Füge die Liste zur HTML-Seite hinzu
+          standingsContainer.appendChild(standingsList);
+        }
+      </script>
 </body>
 </html>

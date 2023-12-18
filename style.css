@@ -156,25 +156,38 @@ nav li {
 }
 
 .pink-box:hover {
-    background-color: #ff00bb; /* Ändern Sie die Hintergrundfarbe im Hover-Zustand */
+    background-color: #f476d2; /* Ändern Sie die Hintergrundfarbe im Hover-Zustand */
     border: 1px solid #ff00bb; /* Ändern Sie den Rand im Hover-Zustand */
 }
 
 #getQuoteButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff00bb; /* Hintergrundfarbe ändern */
-    color: white;
-    border: none;
-    border-radius: 5px; /* Runde Ecken hinzufügen */
-    cursor: pointer;
+    background-color: #ff00bb; /* Hintergrundfarbe ändern (rosa) */
+    color: white; /* Textfarbe ändern */
+    padding: 10px; /* Innenabstand ändern */
+    cursor: pointer; /* Zeiger ändern, um anzuzeigen, dass es anklickbar ist */
+    border: 1px solid #ff00bb; /* Rand hinzufügen */
+    border-radius: 5px; /* Ecken abrunden */
+    text-align: center; /* Text in der Mitte ausrichten */
 }
-
 #getQuoteButton:hover {
     background-color: #f476d2; /* Hintergrundfarbe im Hover-Zustand ändern */
 }
 
-#quoteContainer {
+#myButton {
     margin-top: 20px;
-    font-size: 18px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(255, 0, 183);
+    border: none;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%; /* Änderung: Breite auf 100% setzen */
+    box-sizing: border-box; /* Hinzugefügt: Berücksichtigt Polster und Grenzen in der Breite */
+}
+
+#myButton:hover {
+    background-color: #f476d2;
+    color: black;
+    cursor: pointer;
 }
