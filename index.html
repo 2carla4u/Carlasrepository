@@ -508,5 +508,73 @@ var $candidateToggle = $(".js-candidate-toggle"),
           standingsContainer.appendChild(standingsList);
         }
       </script>
+      <!DOCTYPE html>
+      <html lang="de">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fahrerinformationen</title>
+      </head>
+      <body>
+        <h1>Fahrerinformationen, Stand 31.12.2015</h1>
+        
+        <div id="driverInfo"></div>
+      
+        <script>
+          // Ersetze 'DEINE_FAHRER_ID_HIER' durch die tatsächliche Fahrer-ID
+          const driverId = 'max_verstappen';
+      
+          // Ersetze die Platzhalter in der API-URL
+          const apiUrl = `http://ergast.com/api/f1/drivers/${driverId}/driverStandings.json`;
+      
+          // HTTP-Anfrage an die API senden
+          fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+              // Daten verarbeiten und anzeigen
+              displayDriverInfo(data.MRData.StandingsTable.StandingsLists[0]);
+            })
+            .catch(error => console.error('Fehler beim Abrufen der Daten:', error));
+      
+          // Funktion zum Anzeigen der Fahrerinformationen
+          function displayDriverInfo(driverInfo) {
+            const driverInfoContainer = document.getElementById('driverInfo');
+      
+            // Überprüfe, ob Fahrerinformationen vorhanden sind
+            if (!driverInfo) {
+              driverInfoContainer.textContent = 'Keine Informationen gefunden.';
+              return;
+            }
+      
+            // Erstelle eine Liste der Fahrerinformationen
+            const infoList = document.createElement('ul');
+      
+            // Füge Fahrerinformationen zur Liste hinzu (Hier ein Beispiel, du kannst dies anpassen)
+            const driver = driverInfo.DriverStandings[0].Driver;
+            const constructor = driverInfo.DriverStandings[0].Constructors[0];
+            
+            const nameItem = document.createElement('li');
+            nameItem.textContent = `Name: ${driver.givenName} ${driver.familyName}`;
+            infoList.appendChild(nameItem);
+      
+            const nationalityItem = document.createElement('li');
+            nationalityItem.textContent = `Nationalität: ${driver.nationality}`;
+            infoList.appendChild(nationalityItem);
+      
+            const constructorItem = document.createElement('li');
+            constructorItem.textContent = `Konstrukteur: ${constructor.name}`;
+            infoList.appendChild(constructorItem);
+      
+            const pointsItem = document.createElement('li');
+            pointsItem.textContent = `Punkte: ${driverInfo.DriverStandings[0].points}`;
+            infoList.appendChild(pointsItem);
+      
+            // Füge die Liste zur HTML-Seite hinzu
+            driverInfoContainer.appendChild(infoList);
+          }
+        </script>
+      </body>
+      </html>
+      
 </body>
 </html>
