@@ -163,20 +163,24 @@ body {
         font-size: 24px;
         margin-top: 50px;
       }
-  
       #myButton {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: rgb(255, 0, 183);
-        border: none;  /* Hinzugefügt */
-        color: white;  /* Hinzugefügt */
-        }
-      #myButton a {
-      color: rgb(255, 0, 183);
-      font-style: italic;
-      text-decoration: none;
-    }
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(255, 0, 183);
+    border: none;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%; /* Änderung: Breite auf 100% setzen */
+    box-sizing: border-box; /* Hinzugefügt: Berücksichtigt Polster und Grenzen in der Breite */
+}
+
+#myButton:hover {
+    background-color: #EDEDED;
+    color: black;
+    cursor: pointer;
+}
     </style>  
   <div id="countdown"></div>
   <button id="myButton"><a href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">ASPHALT MASSAKA 4</a></button>
