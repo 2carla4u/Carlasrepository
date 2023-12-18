@@ -463,5 +463,34 @@ var $candidateToggle = $(".js-candidate-toggle"),
      });
      $candidateToggle.trigger("change");
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <button id="getQuoteButton">Kanye Zitat Generator</button>
+    <div id="quoteContainer"></div>
+    <script>
+        $(document).ready(function () {
+            // Der Klick-Event-Handler für den Button
+            $("#getQuoteButton").on("click", function () {
+                // API-Anfrage senden
+                $.ajax({
+                    url: "https://api.kanye.rest",
+                    method: "GET",
+                    success: function (data) {
+                        // Erfolgreiche Antwort verarbeiten
+                        displayQuote(data.quote);
+                    },
+                    error: function () {
+                        // Fehlerbehandlung
+                        displayQuote("Fehler beim Laden des Zitats.");
+                    }
+                });
+            });
+        
+            // Funktion zum Anzeigen des Zitats im quoteContainer
+            function displayQuote(quote) {
+                $("#quoteContainer").text(quote);
+            }
+        });
+        </script>
+        
 </body>
 </html>

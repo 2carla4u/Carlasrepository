@@ -160,4 +160,21 @@ nav li {
     border: 1px solid #ff00bb; /* Ändern Sie den Rand im Hover-Zustand */
 }
 
+#getQuoteButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff00bb; /* Hintergrundfarbe ändern */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Runde Ecken hinzufügen */
+    cursor: pointer;
+}
 
+#getQuoteButton:hover {
+    background-color: #f476d2; /* Hintergrundfarbe im Hover-Zustand ändern */
+}
+
+#quoteContainer {
+    margin-top: 20px;
+    font-size: 18px;
+}
