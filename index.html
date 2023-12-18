@@ -210,21 +210,47 @@
     }, 1000);
   </script>
 <style>
-    .sudoku-board {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        width: 110%; /* Vollständige Breite des Elternelements einnehmen */
-        max-width: 440px; /* Maximale Breite festlegen, um den Text lesbar zu halten */
-        margin: 0 auto; /* Zentrieren */
-    }
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 100%; /* Vollständige Breite des Elternelements einnehmen */
+    max-width: 440px; /* Maximale Breite festlegen, um den Text lesbar zu halten */
+    margin: 0 auto; /* Zentrieren */
+}
 
-    .sudoku-board-cell {
-        position: relative;
-        border: 1px solid #ddd;
-        background: white;
-        padding: 1; /* Kein zusätzlicher Innenabstand */
-        overflow: hidden; /* Zellen sollen den Text nicht überlaufen lassen */
-    }
+.sudoku-board-cell {
+    position: relative;
+    border: 1px solid #ddd;
+    background: white;
+    padding: 0; /* Kein zusätzlicher Innenabstand */
+    overflow: hidden; /* Zellen sollen den Text nicht überlaufen lassen */
+    box-sizing: border-box; /* Border und Padding werden innerhalb der Breite und Höhe berücksichtigt */
+    font-size: 16px; /* Größe des Texts innerhalb der Zellen */
+    text-align: center; /* Text in der Mitte der Zellen ausrichten */
+}
+
+/* Obere Grenzen für die Zellen in den folgenden Zeilen */
+.sudoku-board-cell:nth-child(n+10):nth-child(-n+18),
+.sudoku-board-cell:nth-child(n+19):nth-child(-n+27),
+.sudoku-board-cell:nth-child(n+28):nth-child(-n+36),
+.sudoku-board-cell:nth-child(n+37):nth-child(-n+45),
+.sudoku-board-cell:nth-child(n+46):nth-child(-n+54),
+.sudoku-board-cell:nth-child(n+55):nth-child(-n+63),
+.sudoku-board-cell:nth-child(n+64):nth-child(-n+72),
+.sudoku-board-cell:nth-child(n+73):nth-child(-n+81) {
+    border-top-width: 1px; /* Änderung von 2px auf 1px */
+}
+
+/* Linke Grenzen für die Zellen in den folgenden Spalten */
+[data-board-size="9"] .sudoku-board-cell:nth-child(9n+1) {
+    border-left-width: 1px;
+}
+
+/* Optional: Wenn Sie die Höhe der Zellen anpassen möchten, können Sie dies hier tun */
+.sudoku-board-cell {
+    height: 40px;
+}
+
 
     [data-board-size="9"] .sudoku-board-cell:nth-child(9n+1) {
         border-left-width: 2px;
@@ -254,7 +280,7 @@
         text-align: center;
         width: 100%;
         height: 100%;
-        border: 0;
+        border: 1;
         position: relative;
         z-index: 1;
     }

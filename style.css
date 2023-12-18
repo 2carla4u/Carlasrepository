@@ -38,8 +38,6 @@ p {
     font-size: 16px;
     border: 1px solid #000;
 }
-
-<style>
 #hiddenText {
     display: none;
     font-family: 'Lucida', cursive;
@@ -114,7 +112,7 @@ body {
 
 #audioContainer {
     text-align: center;
-    margin-top: 30;
+    margin-top: 30px; /* Hinzugefügt: Einheit (z. B. px) hinzugefügt */
 }
 
 #playButton {
@@ -124,8 +122,6 @@ body {
     padding: 10px 20px;
     cursor: pointer;
 }
-</style>
-
 /* Optional: Füge Stile für Zellen mit vorgegebenen Zahlen hinzu */
 .sudoku-cell.given {
     background-color: #ddd;
