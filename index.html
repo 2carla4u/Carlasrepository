@@ -146,31 +146,8 @@
         });
     </script>
      <title>Countdown mit Link</title>
-     <style>
-       /* Fügen Sie hier Ihren eigenen CSS-Stil hinzu, um den Countdown zu formatieren */
-       #countdown {
-         font-size: 24px;
-         text-align: center;
-         margin-top: 50px;
-       }
-     </style>
     <title>Countdown mit Link und Button</title>
-    <style>
-body {
-    font-family: Arial, sans-serif;
-}
-
-.wrap {
-    padding: 2em;
-    max-width: 100%;
-    margin: 0 auto;
-}
-  
-      #countdown {
-        font-size: 24px;
-        margin-top: 50px;
-      }
-    </style>  
+   
   <div id="countdown"></div>
 <a id="myButton" href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">
   <span>ASPHALT MASSAKA 4</span>
@@ -206,180 +183,7 @@ body {
     }, 1000);
   </script>
   <iframe src="https://giphy.com/embed/CexIS7KhdpQQsstkNR" width="480" height="338" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/CexIS7KhdpQQsstkNR">via GIPHY</a></p>
-<style>
-    
-.sudoku-board {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    width: 100%; /* Vollständige Breite des Elternelements einnehmen */
-    max-width: 440px; /* Maximale Breite festlegen, um den Text lesbar zu halten */
-    margin: 0 auto; /* Zentrieren */
-}
 
-.sudoku-board-cell {
-    position: relative;
-    border: 1px solid #ddd;
-    background: white;
-    padding: 0; /* Kein zusätzlicher Innenabstand */
-    overflow: hidden; /* Zellen sollen den Text nicht überlaufen lassen */
-    box-sizing: border-box; /* Border und Padding werden innerhalb der Breite und Höhe berücksichtigt */
-    font-size: 16px; /* Größe des Texts innerhalb der Zellen */
-    text-align: center; /* Text in der Mitte der Zellen ausrichten */
-}
-
-/* Obere Grenzen für die Zellen in den folgenden Zeilen */
-.sudoku-board-cell:nth-child(n+10):nth-child(-n+18),
-.sudoku-board-cell:nth-child(n+19):nth-child(-n+27),
-.sudoku-board-cell:nth-child(n+28):nth-child(-n+36),
-.sudoku-board-cell:nth-child(n+37):nth-child(-n+45),
-.sudoku-board-cell:nth-child(n+46):nth-child(-n+54),
-.sudoku-board-cell:nth-child(n+55):nth-child(-n+63),
-.sudoku-board-cell:nth-child(n+64):nth-child(-n+72),
-.sudoku-board-cell:nth-child(n+73):nth-child(-n+81) {
-    border-top-width: 1px; /* Änderung von 2px auf 1px */
-}
-
-/* Linke Grenzen für die Zellen in den folgenden Spalten */
-[data-board-size="9"] .sudoku-board-cell:nth-child(9n+1) {
-    border-left-width: 1px;
-}
-
-/* Optional: Wenn Sie die Höhe der Zellen anpassen möchten, können Sie dies hier tun */
-.sudoku-board-cell {
-    height: 40px;
-}
-
-
-    [data-board-size="9"] .sudoku-board-cell:nth-child(9n+1) {
-        border-left-width: 2px;
-        border-left-color: #808080;
-    }
-
-    [data-board-size="9"] .sudoku-board-cell:nth-child(n):nth-child(-n+9) {
-        border-top-width: 2px;
-        border-top-color: #808080;
-    }
-
-    [data-board-size="9"] .sudoku-board-cell:nth-child(3n) {
-        border-right-width: 2px;
-        border-right-color: #808080;
-    }
-
-    [data-board-size="9"] .sudoku-board-cell:nth-child(n+19):nth-child(-n+27),
-    [data-board-size="9"] .sudoku-board-cell:nth-child(n+46):nth-child(-n+54),
-    [data-board-size="9"] .sudoku-board-cell:nth-child(n+73):nth-child(-n+81) {
-        border-bottom-width: 2px;
-        border-bottom-color: #808080;
-    }
-
-    .sudoku-board-cell input {
-        background: none;
-        font-size: 1.2rem;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        border: 1;
-        position: relative;
-        z-index: 1;
-    }
-
-    .sudoku-board-cell .highlight-val {
-        color: #00d;
-    }
-
-    .sudoku-board-cell .board-cell--error {
-        background: #d00;
-        color: #eee;
-    }
-
-    .sudoku-board-cell .candidates {
-        display: none;
-        position: absolute;
-        top: 0; bottom: 0; left: 0; right: 0;
-        text-align: center;
-        font-size: .75em;
-        letter-spacing: -.5px;
-        font-family: monospace, sans-serif;
-        line-height: 0;
-        text-align: justify;
-    }
-
-    .sudoku-board .candidates:after {
-        content: "";
-        display: inline-block;
-        width: 100%;
-    }
-
-    .candidate--highlight {
-        background-color: yellow;
-    }
-
-    .candidate--to-remove {
-        background-color: red;
-        color: white;
-    }
-
-    .sudokubutton1, .sudokubutton2, .sudokubutton3, .sudokubutton4,
-    .sudokubutton5, .sudokubutton6, .sudokubutton7 {
-        color: white;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        padding: 1px 6px;
-    }
-
-    .sudokubutton1 {
-        background-color: #3cbf71;
-    }
-
-    .sudokubutton2 {
-        background-color: #ff9224;
-    }
-
-    .sudokubutton3 {
-        background-color: #ff3ce2;
-    }
-
-    .sudokubutton4 {
-        background-color: #020202;
-    }
-
-    .sudokubutton5, .sudokubutton6 {
-        background-color: #4040ff;
-    }
-
-    .sudokubutton7 {
-        background-color: #899db6;
-    }
-
-    .sudokubutton1:hover, .sudokubutton2:hover, .sudokubutton3:hover, .sudokubutton4:hover,
-    .sudokubutton5:hover, .sudokubutton6:hover, .sudokubutton7:hover {
-        background-color: #EDEDED;
-        color: black;
-        cursor: pointer;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    .wrap {
-        padding: 2em 1em;
-    }
-
-    @media screen and (min-width: 30em) {
-    .sudoku-board input {
-        font-size: 1.5rem;
-    }
-
-    .sudoku-board .candidates {
-        font-size: .8em;
-    }
-}
-</style>
 
 <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script src="https://mczak.com/code/sudoku/js/sudoku2.js"></script>
@@ -478,8 +282,7 @@ var $candidateToggle = $(".js-candidate-toggle"),
         });
         </script>
         <title>Formel 1 Fahrerwertung</title>
-    </head>
-    <body>
+
       <h1>Formel 1 Fahrerwertung</h1>
       
       <div id="driverStandings"></div>
@@ -572,15 +375,6 @@ var $candidateToggle = $(".js-candidate-toggle"),
 
     <title>Max P1 GIF</title>
 
-    <style>
-        .tenor-gif-embed {
-            max-width: 10%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-
 <div class="tenor-gif-embed" data-postid="9994117068647617302" data-share-method="host" data-aspect-ratio="0.566265" data-width="100%">
     <a href="https://tenor.com/view/max-p1-verstappen-verstapenn-win-winner-gif-9994117068647617302">Max P1 GIF</a>
     from <a href="https://tenor.com/search/max-gifs">Max GIFs</a>
@@ -588,8 +382,5 @@ var $candidateToggle = $(".js-candidate-toggle"),
 
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 pe="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-
-
 </body>
 </html>
