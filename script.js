@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     $candidateToggle.trigger("change");
 });
+
+document.addEventListener('DOMNodeInserted', function(event) {
+    // Handle the DOM insertion event
+    console.log('DOM node inserted:', event.target);
+  });
+  
 // Funktion, die bei Änderungen am DOM aufgerufen wird
 function handleDOMChanges(mutationsList, observer) {
     for (let mutation of mutationsList) {
