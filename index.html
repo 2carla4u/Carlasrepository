@@ -486,7 +486,7 @@ var $candidateToggle = $(".js-candidate-toggle"),
     
       <script>
         // HTTP-Anfrage an die API senden
-        fetch('http://ergast.com/api/f1/current/driverStandings.json')
+        fetch('https://ergast.com/api/f1/current/driverStandings.json')
           .then(response => response.json())
           .then(data => {
             // Daten verarbeiten und anzeigen
@@ -512,14 +512,6 @@ var $candidateToggle = $(".js-candidate-toggle"),
           standingsContainer.appendChild(standingsList);
         }
       </script>
-      <!DOCTYPE html>
-      <html lang="de">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fahrerinformationen</title>
-      </head>
-      <body>
         <h1>Fahrerinformationen, Stand 31.12.2015</h1>
         
         <div id="driverInfo"></div>
