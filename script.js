@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // weitere Konfigurationen...
     });
 
-    // Weitere Event-Listener und Interaktionen...
-
     $candidateToggle.on("change", function() {
         if ($candidateToggle.is(":checked"))
             mySudokuJS.showCandidates();
