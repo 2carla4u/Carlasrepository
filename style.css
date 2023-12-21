@@ -44,7 +44,7 @@ p {
 }
 #hiddenText {
     display: none;
-    font-family: 'Lucida', cursive;
+    font-family: Arial, Helvetica, sans-serif, cursive;
     font-size: 10rem;
     text-align: center;
 }
@@ -61,7 +61,7 @@ p {
     background-color: #ff00bb;
     animation: pulse 1s infinite alternate;
     border-radius: 1px;
-    font-family: 'Lucida', cursive;
+    font-family: Arial, Helvetica, sans-serif, cursive; 
     font-size: 3rem;
 }
 

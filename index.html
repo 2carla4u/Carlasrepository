@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="all" type="text/css" href="style.css">
     <title>Carla's Website</title>
-    <h1>Willkommen auf Carlas Website!</h1>
+    <h1>Willkommen auf Carlas Website! 🩷</h1>
     <nav>
         <ul>
             <li><a href="#about-section">Über mich</a></li>
@@ -17,7 +17,25 @@
     <div id="toggleButtonContainer">
         <button id="toggleButton">Einblenden</button>
     </div>
-    <div id="hiddenText">I love Lana del Rey!!</div>
+    <div id="hiddenText">I love Lana del Rey!! 🩷</div>
+    <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const hiddenText = document.getElementById("hiddenText");
+    let isHidden = true;
+    
+    toggleButton.addEventListener("click", function () {
+        if (isHidden) {
+            hiddenText.style.display = "block";
+            toggleButton.textContent = "Ausblenden";
+            toggleButton.style.animation = "none";
+        } else {
+            hiddenText.style.display = "none";
+            toggleButton.textContent = "Einblenden";
+            toggleButton.style.animation = "pulse 1s infinite alternate";
+        }
+        isHidden = !isHidden;
+    });
+</script>
 
     <div id="audioContainer">
         <button id="playButton">Abspielen</button>
@@ -28,13 +46,13 @@
     </div>
 
     <div id="about-section">
-        <h2>Über mich</h2>
+        <h1>Über mich</h1>
         <p>Ich bin Carla und studiere Wirtschaftsinformatik.</p>
         <p>In meiner Freizeit backe und koche ich. &#129380;</p>
         <p>Ich habe drei Schwestern. &#128105;&#8205;&#128105;&#8205;&#128105;</p>
         <iframe src="https://giphy.com/embed/AGSOXnGpH5N3hM8B1h" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hbo-game-of-thrones-got-house-the-dragon-AGSOXnGpH5N3hM8B1h">via GIPHY</a></p>
     </div>
-        <h2> Mein Rezept</h2>
+        <h1> Mein Rezept 🩷</h1>
     <img src="Olivenbrot.jpg" alt="Olivenbrot" width="300">
     <div id="rezept">
         <div class="pink-box" onclick="toggleRecipe()">
@@ -104,21 +122,50 @@
         recipeText.style.display = 'none';
     }
 }
+
     </script>
      <title>Countdown mit Link</title>
     <title>Countdown mit Link und Button</title>
-   
+
+    <h1>Countdown bis zum Konzert 🩷</h1>
   <div id="countdown"></div>
 <a id="myButton" href="https://komplex-457.ch/event/farid-bang-capo-vandamme/" style="text-decoration: none; color: inherit;">
   <span>ASPHALT MASSAKA 4</span>
   
 </a>
   <script>
-   
+    // Setzen Sie das Enddatum für den Countdown
+ var countDownDate = new Date("Jan 12, 2024 20:00:00").getTime();
+  
+  // Aktualisieren Sie den Countdown alle 1 Sekunde
+  var x = setInterval(function() {
+ 
+    // Holen Sie das aktuelle Datum und die Uhrzeit
+    var now = new Date().getTime();
+ 
+    // Berechnen Sie den Abstand zwischen dem aktuellen Datum und dem Enddatum
+    var distance = countDownDate - now;
+ 
+    // Berechnen Sie Tage, Stunden, Minuten und Sekunden
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+    // Anzeigen des Countdowns in einem Element mit der ID "countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+ 
+    // Wenn der Countdown abgelaufen ist, zeigen Sie eine Nachricht an
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
   </script>
   <iframe src="https://giphy.com/embed/CexIS7KhdpQQsstkNR" width="480" height="338" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/CexIS7KhdpQQsstkNR">via GIPHY</a></p>
 
 
+  <h1>Mein zerissenes Sudoku 🩷</h1>
 <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script src="https://mczak.com/code/sudoku/js/sudoku2.js"></script>
 <div class="wrap">
