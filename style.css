@@ -328,11 +328,11 @@ nav li {
         }
     
         .sudokubutton1 {
-            background-color: #3cbf71;
+            background-color: #fcb7f2;
         }
     
         .sudokubutton2 {
-            background-color: #ff9224;
+            background-color: #ff7eec;
         }
     
         .sudokubutton3 {
@@ -340,15 +340,15 @@ nav li {
         }
     
         .sudokubutton4 {
-            background-color: #020202;
+            background-color: #fd2fde;
         }
     
         .sudokubutton5, .sudokubutton6 {
-            background-color: #4040ff;
+            background-color: #ff00d9;
         }
     
         .sudokubutton7 {
-            background-color: #899db6;
+            background-color: #d100b1;
         }
     
         .sudokubutton1:hover, .sudokubutton2:hover, .sudokubutton3:hover, .sudokubutton4:hover,
