@@ -44,3 +44,18 @@ function handleDOMChanges(mutationsList, observer) {
   // Starte die Überwachung mit der Konfiguration
   observer.observe(document, config);
   
+
+  // Vorher (veraltetes DOM Mutation Event)
+document.addEventListener('DOMNodeInserted', function(event) {
+  // Dein Code hier
+});
+
+// Nachher (MutationObserver)
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+      // Dein Code hier
+  });
+});
+
+const config = { childList: true }; // Konfiguration für beobachtete Änderungen
+observer.observe(document, config);
