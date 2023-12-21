@@ -1,61 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var $candidateToggle = $(".js-candidate-toggle");
-    var $generateBoardBtnEasy = $(".js-generate-board-btn--easy");
-    var $solveStepBtn = $(".js-solve-step-btn");
-    var $solveAllBtn = $(".js-solve-all-btn");
-    var $clearBoardBtn = $(".js-clear-board-btn");
+  var $candidateToggle = $(".js-candidate-toggle");
+  var $generateBoardBtnEasy = $(".js-generate-board-btn--easy");
+  var $solveStepBtn = $(".js-solve-step-btn");
+  var $solveAllBtn = $(".js-solve-all-btn");
+  var $clearBoardBtn = $(".js-clear-board-btn");
 
-    var mySudokuJS = $("#sudoku").sudokuJS({
-        difficulty: "very hard",
-        // weitere Konfigurationen...
-    });
-
-    $candidateToggle.on("change", function() {
-        if ($candidateToggle.is(":checked"))
-            mySudokuJS.showCandidates();
-        else
-            mySudokuJS.hideCandidates();
-    });
-    
-    $candidateToggle.trigger("change");
-});
-
-document.addEventListener('DOMNodeInserted', function(event) {
-    // Handle the DOM insertion event
-    console.log('DOM node inserted:', event.target);
+  var mySudokuJS = $("#sudoku").sudokuJS({
+      difficulty: "very hard",
+      // weitere Konfigurationen...
   });
-  
+
+  $candidateToggle.on("change", function() {
+      if ($candidateToggle.is(":checked"))
+          mySudokuJS.showCandidates();
+      else
+          mySudokuJS.hideCandidates();
+  });
+
+  $candidateToggle.trigger("change");
+});
 // Funktion, die bei Änderungen am DOM aufgerufen wird
 function handleDOMChanges(mutationsList, observer) {
-    for (let mutation of mutationsList) {
+  for (let mutation of mutationsList) {
       if (mutation.type === 'childList') {
-        // Handle the DOM changes here
-        console.log('DOM node inserted:', mutation.target);
+          // Handle the DOM changes here
+          console.log('DOM node inserted:', mutation.target);
       }
-    }
   }
-  
-  // Erstelle eine Instanz von MutationObserver mit der oben definierten Funktion
-  const observer = new MutationObserver(handleDOMChanges);
-  
-  // Konfiguration für MutationObserver (überwache Änderungen an der Kinderliste des gesamten Dokuments)
-  const config = { childList: true, subtree: true };
-  
-  // Starte die Überwachung mit der Konfiguration
-  observer.observe(document, config);
-  
+}
 
-  // Vorher (veraltetes DOM Mutation Event)
-document.addEventListener('DOMNodeInserted', function(event) {
-  // Dein Code hier
-});
+// Erstelle eine Instanz von MutationObserver mit der oben definierten Funktion
+const observer = new MutationObserver(handleDOMChanges);
 
-// Nachher (MutationObserver)
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-      // Dein Code hier
-  });
-});
+// Konfiguration für MutationObserver (überwache Änderungen an der Kinderliste des gesamten Dokuments)
+const config = { childList: true, subtree: true };
 
-const config = { childList: true }; // Konfiguration für beobachtete Änderungen
+// Starte die Überwachung mit der Konfiguration
 observer.observe(document, config);
